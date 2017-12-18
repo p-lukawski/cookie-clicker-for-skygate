@@ -55,3 +55,8 @@
     background: url("../img/cookie.png") no-repeat center/contain;
 }
 
+.cookie:active {
+    position:relative;
+    top:1px;
+}
+
