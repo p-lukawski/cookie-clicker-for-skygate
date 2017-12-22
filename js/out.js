@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 ownedCookiesEl.innerHTML = ownedCookies;
                 ownedEl.innerHTML++;
                 cookiesPsec = cookiesPsec + argument.production;
+                cookiesPsec.toFixed(1);
                 cookiesPsecEl.innerHTML = cookiesPsec.toFixed(1);
                 argument.cost = Math.ceil(argument.cost * 1.15);
                 costEl.innerHTML = argument.cost;
@@ -147,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var producersBaking = function producersBaking() {
         ownedCookies = ownedCookies + cookiesPsec;
+        ownedCookies.toFixed(0);
         ownedCookiesEl.innerHTML = ownedCookies.toFixed(0);
     };
 
@@ -173,6 +175,28 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     newGameBtn.addEventListener('click', newGame);
+
+    /*INDEXEDDB*/
+
+    window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+
+    if (!window.indexedDB) {
+        window.alert("Your browser doesn't support a stable version of IndexedDB.");
+    }
+
+    var db = void 0;
+
+    var request = window.indexedDB.open('Database', 1);
+
+    request.onerror = function (event) {
+        alert("You don't give me permission to create a database, why?! :(");
+    };
+    request.onsuccess = function (event) {
+        db = request.result;
+        read();
+    };
+
+    var tab = [ownedCookiesEl, cookiesPsecEl];
 });
 
 /***/ })
