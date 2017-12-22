@@ -74,16 +74,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /*CONSTRUCTOR*/
 
-    var Producer = function Producer(name, cost, owned, img, production) {
+    var Producer = function Producer(name, cost, owned, img, production, baseCost) {
         this.name = name;
         this.cost = cost;
         this.owned = owned;
         this.img = img;
         this.production = production;
+        this.baseCost = baseCost;
     };
 
     /*VARIABLES*/
 
+    var newGameBtn = document.getElementById('newGame');
     var cookieBtn = document.querySelector('.cookie');
     var ownedCookies = 0;
     var ownedCookiesEl = document.getElementById('ownedCookies');
@@ -92,11 +94,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var cookiesPsecEl = document.getElementById('cPs');
     cookiesPsecEl.innerHTML = cookiesPsec;
     var producers = [];
-    var cursor = new Producer('Cursor', 15, 0, 'img/cursor.jpg', 0.1);
-    var grandma = new Producer('Grandma', 100, 0, 'img/grandma.png', 1);
-    var farm = new Producer('Farm', 1100, 0, 'img/farm.png', 8);
-    var bakery = new Producer('Bakery', 12000, 0, 'img/bakery.png', 47);
-    var mine = new Producer('Mine', 130000, 0, 'img/mine.png', 260);
+    var cursor = new Producer('Cursor', 15, 0, 'img/cursor.jpg', 0.1, 15);
+    var grandma = new Producer('Grandma', 100, 0, 'img/grandma.png', 1, 100);
+    var farm = new Producer('Farm', 1100, 0, 'img/farm.png', 8, 1100);
+    var bakery = new Producer('Bakery', 12000, 0, 'img/bakery.png', 47, 12000);
+    var mine = new Producer('Mine', 130000, 0, 'img/mine.png', 260, 130000);
     producers.push(cursor, grandma, farm, bakery, mine);
 
     /*FUNCTIONS*/
@@ -126,6 +128,8 @@ document.addEventListener('DOMContentLoaded', function () {
         producerEl.innerHTML = '<span>' + argument.name + ' Production: ' + argument.production + '</span>';
         var ownedEl = document.createElement('span');
         var costEl = document.createElement('span');
+        ownedEl.classList.add('owned' + argument.name);
+        costEl.classList.add('cost' + argument.name);
         ownedEl.innerHTML = argument.owned;
         costEl.innerHTML = argument.cost;
         producerEl.appendChild(costEl);
@@ -151,6 +155,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1000);
 
     cookieBtn.addEventListener('click', bakingCookies);
+
+    var newGame = function newGame() {
+        ownedCookies = 0;
+        ownedCookiesEl.innerHTML = ownedCookies;
+        cookiesPsec = 0;
+        cookiesPsecEl.innerHTML = cookiesPsec;
+        var clearProducers = function clearProducers(argument) {
+            var ownedEl = document.querySelector('.owned' + argument.name);
+            var costEl = document.querySelector('.cost' + argument.name);
+            argument.owned = 0;
+            ownedEl.innerHTML = argument.owned;
+            argument.cost = argument.baseCost;
+            costEl.innerHTML = argument.cost;
+        };
+        producers.forEach(clearProducers);
+    };
+
+    newGameBtn.addEventListener('click', newGame);
 });
 
 /***/ })

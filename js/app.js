@@ -4,12 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /*CONSTRUCTOR*/
 
-    let Producer = function(name,cost,owned,img, production) {
+    let Producer = function(name,cost,owned,img, production, baseCost) {
         this.name = name;
         this.cost = cost;
         this.owned = owned;
         this.img = img;
         this.production = production;
+        this.baseCost = baseCost;
 
     };
 
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /*VARIABLES*/
 
+    let newGameBtn = document.getElementById('newGame');
     let cookieBtn = document.querySelector('.cookie');
     let ownedCookies = 0;
     let ownedCookiesEl = document.getElementById('ownedCookies');
@@ -25,11 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let cookiesPsecEl = document.getElementById('cPs');
     cookiesPsecEl.innerHTML = cookiesPsec;
     let producers = [];
-    let cursor = new Producer('Cursor', 15, 0, 'img/cursor.jpg', 0.1);
-    let grandma = new Producer('Grandma', 100, 0, 'img/grandma.png', 1);
-    let farm = new Producer('Farm', 1100, 0, 'img/farm.png', 8);
-    let bakery = new Producer('Bakery', 12000, 0, 'img/bakery.png', 47);
-    let mine = new Producer('Mine',130000, 0, 'img/mine.png', 260);
+    let cursor = new Producer('Cursor', 15, 0, 'img/cursor.jpg', 0.1, 15);
+    let grandma = new Producer('Grandma', 100, 0, 'img/grandma.png', 1, 100);
+    let farm = new Producer('Farm', 1100, 0, 'img/farm.png', 8, 1100);
+    let bakery = new Producer('Bakery', 12000, 0, 'img/bakery.png', 47, 12000);
+    let mine = new Producer('Mine',130000, 0, 'img/mine.png', 260, 130000);
     producers.push(cursor,grandma,farm,bakery,mine);
 
 
@@ -64,6 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
         producerEl.innerHTML = '<span>' + argument.name + ' Production: ' + argument.production + '</span>';
         let ownedEl = document.createElement('span');
         let costEl = document.createElement('span');
+        ownedEl.classList.add('owned' + argument.name);
+        costEl.classList.add('cost' + argument.name);
         ownedEl.innerHTML = argument.owned;
         costEl.innerHTML = argument.cost;
         producerEl.appendChild(costEl);
@@ -92,7 +96,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     cookieBtn.addEventListener('click', bakingCookies);
+    
+    let newGame = function () {
+        ownedCookies = 0;
+        ownedCookiesEl.innerHTML = ownedCookies;
+        cookiesPsec = 0;
+        cookiesPsecEl.innerHTML = cookiesPsec;
+        let clearProducers = function (argument) {
+            let ownedEl = document.querySelector('.owned' + argument.name);
+            let costEl = document.querySelector('.cost' + argument.name);
+            argument.owned = 0;
+            ownedEl.innerHTML = argument.owned;
+            argument.cost = argument.baseCost;
+            costEl.innerHTML = argument.cost;
 
+        };
+        producers.forEach(clearProducers);
+        
+    };
 
+    newGameBtn.addEventListener('click', newGame);
 
 });
