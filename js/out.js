@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var producerImg = document.createElement('div');
         producerImg.classList.add('producerImg');
         producerImg.style.background = 'url' + '(' + argument.img + ') no-repeat center/cover';
-        producerEl.innerHTML = '<span>' + argument.name + ' Production: ' + argument.production + '</span>';
+        producerEl.innerHTML = '<span>' + argument.name + ' Production: ' + argument.production + '/s' + '</span>';
         var ownedEl = document.createElement('span');
         var costEl = document.createElement('span');
         ownedEl.classList.add('owned' + argument.name);

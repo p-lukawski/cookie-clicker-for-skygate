@@ -30,6 +30,7 @@
 .box {
     display: inline-block;
     width: 48%;
+
 }
 
 #producersList {
@@ -40,6 +41,15 @@
     width: 100%;
 }
 
+#producersList li:active {
+    position: relative;
+    top: 5px;
+}
+
+#producersList li span {
+    padding: 5px;
+}
+
 .producerImg {
     border: 1px solid black;
     width: 40%;
@@ -48,15 +58,16 @@
 }
 
 .cookie {
-    width: 100px;
-    height: 100px;
+    width: 80%;
+    height: 300px;
     border: 1px solid black;
     border-radius: 50%;
     background: url("../img/cookie.png") no-repeat center/contain;
+    margin: 100px auto;
 }
 
 .cookie:active {
     position:relative;
-    top:10px;
+    top:5px;
 }
 
