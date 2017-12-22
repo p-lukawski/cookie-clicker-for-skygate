@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6d23979-1221-4afc-82d5-84ba0f229c8b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/out.js" afterPath="$PROJECT_DIR$/js/out.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,29 +22,44 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
+            <state relative-caret-position="407">
               <caret line="59" column="10" lean-forward="false" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="312">
+              <caret line="51" column="58" lean-forward="false" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="out.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/out.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1376">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1513958445628" expanded="true" signature="2404:5667" ph="[...]" />
+                <marker date="1513958445628" expanded="true" signature="5644:5655" ph="{...}" />
+                <marker date="1513958445628" expanded="true" signature="5648:5653" ph="/*...*/" />
+                <marker date="1513958445628" expanded="true" signature="5657:5665" ph="/*...*/" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,7 +67,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Nowy folder (3)/rock-paper-scissors-lizard-spock-game/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="374">
               <caret line="22" column="91" lean-forward="false" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
               <folding />
             </state>
@@ -65,9 +83,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/js/out.js" />
+        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -107,7 +125,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -129,7 +147,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,18 +185,19 @@
       <workItem from="1513245245878" duration="2845000" />
       <workItem from="1513266219182" duration="325000" />
       <workItem from="1513271306172" duration="30551000" />
-      <workItem from="1513611945707" duration="2563000" />
+      <workItem from="1513611945707" duration="3160000" />
+      <workItem from="1513693551100" duration="15284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41099000" />
+    <option name="totallyTimeSpent" value="56980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.122023806" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.118303575" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -203,10 +222,51 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/app.js</url>
+          <line>84</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Nowy folder (3)/rock-paper-scissors-lizard-spock-game/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="91" lean-forward="false" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="10" lean-forward="false" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -410,41 +470,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/out.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1303">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Nowy folder (3)/rock-paper-scissors-lizard-spock-game/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="374">
           <caret line="22" column="91" lean-forward="false" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
+        <state relative-caret-position="407">
           <caret line="59" column="10" lean-forward="false" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/out.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1376">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1513958445628" expanded="true" signature="2404:5667" ph="[...]" />
+            <marker date="1513958445628" expanded="true" signature="5644:5655" ph="{...}" />
+            <marker date="1513958445628" expanded="true" signature="5648:5653" ph="/*...*/" />
+            <marker date="1513958445628" expanded="true" signature="5657:5665" ph="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="51" column="58" lean-forward="false" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
           <folding />
         </state>
       </provider>

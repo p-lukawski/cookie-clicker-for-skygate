@@ -74,11 +74,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /*CONSTRUCTOR*/
 
-    var Producer = function Producer(name, cost, owned, img) {
+    var Producer = function Producer(name, cost, owned, img, production) {
         this.name = name;
         this.cost = cost;
         this.owned = owned;
         this.img = img;
+        this.production = production;
     };
 
     /*VARIABLES*/
@@ -87,36 +88,48 @@ document.addEventListener('DOMContentLoaded', function () {
     var ownedCookies = 0;
     var ownedCookiesEl = document.getElementById('ownedCookies');
     ownedCookiesEl.innerText = ownedCookies;
+    var cookiesPsec = 0;
+    var cookiesPsecEl = document.getElementById('cPs');
+    cookiesPsecEl.innerHTML = cookiesPsec;
     var producers = [];
-    var cursor = new Producer('Cursor', 15, 0, 'img/cursor.jpg');
-    var grandma = new Producer('Grandma', 100, 0, 'img/grandma.png');
-    var farm = new Producer('Farm', 1100, 0, 'img/farm.png');
-    var bakery = new Producer('Bakery', 12000, 0, 'img/bakery.png');
-    var mine = new Producer('Mine', 130000, 0, 'img/mine.png');
+    var cursor = new Producer('Cursor', 15, 0, 'img/cursor.jpg', 0.1);
+    var grandma = new Producer('Grandma', 100, 0, 'img/grandma.png', 1);
+    var farm = new Producer('Farm', 1100, 0, 'img/farm.png', 8);
+    var bakery = new Producer('Bakery', 12000, 0, 'img/bakery.png', 47);
+    var mine = new Producer('Mine', 130000, 0, 'img/mine.png', 260);
     producers.push(cursor, grandma, farm, bakery, mine);
 
     /*FUNCTIONS*/
 
-    var buyingProducer = function buyingProducer() {
-
-        if (ownedCookies >= this.dataset.cost) {
-            this.dataset.owned += 1;
-            ownedCookies = ownedCookies - this.dataset.cost;
-        }
-        console.log(this.dataset.cost, this.dataset.owned);
-    };
-
     var buildProducersList = function buildProducersList(argument) {
+        var buyingProducer = function buyingProducer() {
+
+            if (ownedCookies >= argument.cost) {
+                console.log(argument.cost);
+                argument.owned++;
+                ownedCookies = ownedCookies - argument.cost;
+                ownedCookiesEl.innerHTML = ownedCookies;
+                ownedEl.innerHTML++;
+                cookiesPsec = cookiesPsec + argument.production;
+                cookiesPsecEl.innerHTML = cookiesPsec.toFixed(1);
+                argument.cost = Math.ceil(argument.cost * 1.15);
+                costEl.innerHTML = argument.cost;
+                console.log(argument.cost);
+            }
+        };
         var producersList = document.getElementById('producersList');
         var producerEl = document.createElement('li');
-        producerEl.dataset.name = argument.name;
-        producerEl.dataset.cost = argument.cost;
-        producerEl.dataset.owned = argument.owned;
         producerEl.addEventListener('click', buyingProducer);
         var producerImg = document.createElement('div');
         producerImg.classList.add('producerImg');
         producerImg.style.background = 'url' + '(' + argument.img + ') no-repeat center/cover';
-        producerEl.innerHTML = '<span>' + producerEl.dataset.name + ' Owned: ' + producerEl.dataset.owned + ' Cost: ' + producerEl.dataset.cost + ' </span>';
+        producerEl.innerHTML = '<span>' + argument.name + ' Production: ' + argument.production + '</span>';
+        var ownedEl = document.createElement('span');
+        var costEl = document.createElement('span');
+        ownedEl.innerHTML = argument.owned;
+        costEl.innerHTML = argument.cost;
+        producerEl.appendChild(costEl);
+        producerEl.appendChild(ownedEl);
         producerEl.appendChild(producerImg);
         producersList.appendChild(producerEl);
     };
@@ -125,7 +138,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var bakingCookies = function bakingCookies() {
         ownedCookies++;
+        ownedCookiesEl.innerHTML++;
     };
+
+    var producersBaking = function producersBaking() {
+        ownedCookies = ownedCookies + cookiesPsec;
+        ownedCookiesEl.innerHTML = ownedCookies.toFixed(0);
+    };
+
+    setInterval(function () {
+        producersBaking();
+    }, 1000);
 
     cookieBtn.addEventListener('click', bakingCookies);
 });
